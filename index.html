@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
+<head>q<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
   <title>My LIFF app</title>
   <link rel="stylesheet" href="css/style.css" media="all">
@@ -66,6 +65,15 @@
     }
 
     async function sendMsg() {
+      if(liff.getContext().type !== "none"){
+       await liff.sendMessages([
+         {
+           "type":"sticker",
+           "stickerId": 1,
+           "packageId":1
+         }
+       ]) 
+      }
     }
 
     function getContext() {
