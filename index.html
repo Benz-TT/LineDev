@@ -68,10 +68,9 @@
       if(liff.getContext().type !== "none"){
        await liff.sendMessages([
          {
-           "type":"sticker",
-           "stickerId":1,
-           "packageId":1
-         }
+            "type": "text",
+            "text": "อิหยังครับผม"
+          }
        ])
         alert("Message sent")
       }
@@ -83,6 +82,7 @@
       document.getElementById("utouId").append(liff.getContext().utouId)
       document.getElementById("roomId").append(liff.getContext().roomId)
       document.getElementById("groupId").append(liff.getContext().groupId)
+      
     }
 
     async function getUserProfile() {
